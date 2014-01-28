@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 展示页面注册按钮 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 获取焦点状态 -->
+    <item android:drawable="@drawable/exhibition_button_register_click" android:state_focused="true"/>
+    <!-- 被点击状态 -->
+    <item android:drawable="@drawable/exhibition_button_register_click" android:state_pressed="true"/>
+    <!-- 其它状态 -->
+    <item android:drawable="@drawable/exhibition_button_register_normal" android:state_focused="false"/>
+
+</selector>

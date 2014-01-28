@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 标题栏属性 -->
+    <declare-styleable name="TitleBar">
+
+        <!-- 左按钮背景图片 -->
+        <attr name="_fLeftButtonDrawableId" format="reference" />
+        <!-- 标题字符串 -->
+        <attr name="_fTitleStringId" format="reference" />
+        <!-- 右按钮背景图片 -->
+        <attr name="_fRightButtonDrawableId" format="reference" />
+        
+        
+    </declare-styleable>
+
+</resources>
