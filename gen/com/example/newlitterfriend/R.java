@@ -26,6 +26,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int _fTitleStringId=0x7f010001;
     }
     public static final class color {
+        public static final int black=0x7f040001;
         /**  基本颜色 
          */
         public static final int white=0x7f040000;
@@ -53,9 +54,19 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int exhibition_picture4=0x7f020009;
         public static final int exhibition_picture5=0x7f02000a;
         public static final int ic_launcher=0x7f02000b;
-        public static final int splash_launcher=0x7f02000c;
-        public static final int titlebar_background=0x7f02000d;
-        public static final int titlebar_imagebutton_back=0x7f02000e;
+        public static final int login_button_login_click=0x7f02000c;
+        public static final int login_button_login_normal=0x7f02000d;
+        public static final int login_button_login_selector=0x7f02000e;
+        public static final int register_imageview_step_four=0x7f02000f;
+        public static final int register_imageview_step_one=0x7f020010;
+        public static final int register_imageview_step_three=0x7f020011;
+        public static final int register_imageview_step_two=0x7f020012;
+        public static final int splash_launcher=0x7f020013;
+        public static final int table_bottom_background=0x7f020014;
+        public static final int table_middle_background=0x7f020015;
+        public static final int table_top_background=0x7f020016;
+        public static final int titlebar_background=0x7f020017;
+        public static final int titlebar_imagebutton_back=0x7f020018;
     }
     public static final class id {
         public static final int action_settings=0x7f09000a;
@@ -64,8 +75,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int exhibition_imageview_picture=0x7f090006;
         public static final int exhibition_viewpager_pictures=0x7f090000;
         public static final int login_titlebar=0x7f090003;
+        public static final int register_titlebar=0x7f090004;
         public static final int splash_imageview_launcher=0x7f090005;
-        public static final int textView1=0x7f090004;
         public static final int titlebar_imagebutton_left=0x7f090007;
         public static final int titlebar_imagebutton_right=0x7f090009;
         public static final int titlebar_textview_title=0x7f090008;
@@ -87,6 +98,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /**  登陆页面 
          */
         public static final int login_titlebar_text=0x7f060002;
+        /**  注册页面 
+         */
+        public static final int register_titlebar_text1=0x7f060003;
+        public static final int register_titlebar_text2=0x7f060004;
+        public static final int register_titlebar_text3=0x7f060005;
+        public static final int register_titlebar_text4=0x7f060006;
     }
     public static final class style {
         /** 

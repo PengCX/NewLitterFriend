@@ -3,8 +3,13 @@
 
     <string name="app_name">小伙伴</string>
     <string name="action_settings">Settings</string>
-    
+
     <!-- 登陆页面 -->
     <string name="login_titlebar_text">用户登录</string>
+    <!-- 注册页面 -->
+    <string name="register_titlebar_text1">验证手机</string>
+    <string name="register_titlebar_text2">绑定角色</string>
+    <string name="register_titlebar_text3">个人信息</string>
+    <string name="register_titlebar_text4">完成注册</string>
 
 </resources>

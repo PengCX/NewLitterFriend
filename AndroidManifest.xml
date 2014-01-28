@@ -27,7 +27,9 @@
         <activity android:name="com.example.newlitterfriend.control.acitivity.launcher.ExhibitionFragmentActivity" >
         </activity>
         <!-- 登陆页面 -->
-        <activity android:name="com.example.newlitterfriend.control.acitivity.login.LoginFragmentActivity" >
+        <activity
+            android:name="com.example.newlitterfriend.control.acitivity.login.LoginFragmentActivity"
+            android:windowSoftInputMode="stateVisible" >
         </activity>
         <!-- 注册页面 -->
         <activity android:name="com.example.newlitterfriend.control.acitivity.login.RegisterFragmentActivity" >

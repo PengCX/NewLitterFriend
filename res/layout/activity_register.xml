@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 注册页面 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.newlitterfriend"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+    <!-- 标题 -->
+
+    <com.example.newlitterfriend.view.title.TitleBar
+        android:id="@+id/register_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:_fLeftButtonDrawableId="@drawable/titlebar_imagebutton_back"
+        app:_fTitleStringId="@string/register_titlebar_text1" />
+    <!-- 导航图片 -->
+
+    <ImageView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="注册页面" />
+        android:background="@drawable/register_imageview_step_one" />
+
+    <!-- 手机号 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/table_middle_background"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="手机号"
+            android:textColor="#666666"
+            android:textSize="17sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="@color/white"
+            android:inputType="phone" />
+    </LinearLayout>
 
 </LinearLayout>
