@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 登陆页面 -->
+<!-- 绑定角色页面 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res/com.example.newlitterfriend"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:gravity="center_horizontal"
     android:orientation="vertical" >
 
     <!-- 标题 -->
 
     <com.example.newlitterfriend.view.title.TitleBar
-        android:id="@+id/login_titlebar"
+        android:id="@+id/bindrole_titlebar"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         app:_fLeftButtonDrawableId="@drawable/titlebar_imagebutton_back"
-        app:_fTitleStringId="@string/login_titlebar_text" />
+        app:_fTitleStringId="@string/bindrole_titlebar_text" />
+    <!-- 导航图片 -->
 
-    <!-- 登陆输入表格 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bindrole_imageview_step" />
+
+    <!-- 绑定提示 -->
+
+    <TextView
+        android:id="@+id/bindrole_textview_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="如果您有多名角色，请先绑定最主要的，其他游戏角色可在注册完成之后，在设置面板中添加"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="?android:attr/textColorTertiaryInverse" />
+
+    <!-- 绑定角色表格 -->
 
     <TableLayout
         android:layout_width="match_parent"
@@ -24,7 +44,7 @@
         android:layout_margin="10dp"
         android:stretchColumns="1" >
 
-        <!-- 国家区号 -->
+        <!-- 选择游戏 -->
 
         <TableRow android:background="@drawable/table_top_background" >
 
@@ -33,19 +53,18 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:paddingLeft="5dp"
-                android:text="中国(+86)"
+                android:text="选择游戏"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="?android:attr/textColorSecondaryInverse" />
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="1dp"
-                android:background="@color/white"
-                android:visibility="gone" />
+                android:drawableRight="@drawable/bindrole_textview_leftdrawable"
+                android:paddingRight="5dp" />
         </TableRow>
 
-        <!-- 手机号 -->
+        <!-- 所在服务器 -->
 
         <TableRow android:background="@drawable/table_middle_background" >
 
@@ -54,20 +73,18 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:paddingLeft="5dp"
-                android:text="手机号"
+                android:text="所在服务器"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="?android:attr/textColorSecondaryInverse" />
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="1dp"
-                android:focusable="true"
-                android:background="@color/white"
-                android:inputType="phone" />
+                android:drawableRight="@drawable/bindrole_textview_leftdrawable"
+                android:paddingRight="5dp" />
         </TableRow>
 
-        <!-- 密码 -->
+        <!-- 角色名称 -->
 
         <TableRow android:background="@drawable/table_bottom_background" >
 
@@ -76,7 +93,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:paddingLeft="5dp"
-                android:text="密    码"
+                android:text="角色名"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="?android:attr/textColorSecondaryInverse" />
 
@@ -89,45 +106,38 @@
         </TableRow>
     </TableLayout>
 
+    <!-- 绑定角色按钮 -->
+
     <Button
-        android:id="@+id/login_button_login"
+        android:id="@+id/bindrole_button_bind"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/login_button_login_selector"
-        android:text="登    录"
+        android:text="绑定角色"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="?android:attr/textColorPrimary" />
 
-    <LinearLayout
+    <!-- 提示 -->
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp" >
+        android:layout_margin="10dp"
+        android:text="繁体字可使用手写输入法，角色名过于生僻无法输入时，可尝试"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="?android:attr/textColorTertiaryInverse" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.0"
-            android:gravity="right"
-            android:text="找回密码"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="?android:attr/textColorTertiaryInverse" />
+    <!-- 查找角色按钮 -->
 
-        <TextView
-            android:layout_width="10dp"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:text="|"
-            android:textColor="?android:attr/textColorTertiaryInverse" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.0"
-            android:gravity="left"
-            android:text="新用户注册"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="?android:attr/textColorTertiaryInverse" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/bindrole_button_searchrole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableLeft="@drawable/bindrole_button_searchrole"
+        android:text="查找角色"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/blue" />
 
 </LinearLayout>

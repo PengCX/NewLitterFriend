@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 验证码页面重发按钮图片选择器 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按压状态 -->
+    <item android:drawable="@drawable/authon_button_resend_click" android:state_pressed="true"/>
+    <!-- 获取焦点状态 -->
+    <item android:drawable="@drawable/authon_button_resend_click" android:state_focused="true"/>
+    <!-- 其它状态 -->
+    <item android:drawable="@drawable/authcode_button_resend_normal"/>
+
+</selector>

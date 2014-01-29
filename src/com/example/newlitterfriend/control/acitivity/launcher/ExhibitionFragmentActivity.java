@@ -5,7 +5,7 @@ import roboguice.inject.InjectView;
 
 import com.example.newlitterfriend.R;
 import com.example.newlitterfriend.control.acitivity.login.LoginFragmentActivity;
-import com.example.newlitterfriend.control.acitivity.login.RegisterFragmentActivity;
+import com.example.newlitterfriend.control.acitivity.register.GetAuthCodeFragmentActivity;
 import com.example.newlitterfriend.control.adapter.ExihibitionPagerAdapter;
 
 import android.content.Intent;
@@ -67,7 +67,7 @@ public class ExhibitionFragmentActivity extends RoboFragmentActivity {
 	 *            注册按钮视图
 	 */
 	public void turnToRegisterPager(View view) {
-		Intent intent = new Intent(this,RegisterFragmentActivity.class);
+		Intent intent = new Intent(this,GetAuthCodeFragmentActivity.class);
 		startActivity(intent);
 	}
 }

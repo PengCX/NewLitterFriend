@@ -29,11 +29,24 @@
         <!-- 登陆页面 -->
         <activity
             android:name="com.example.newlitterfriend.control.acitivity.login.LoginFragmentActivity"
-            android:windowSoftInputMode="stateVisible" >
+            android:windowSoftInputMode="stateAlwaysVisible" >
         </activity>
-        <!-- 注册页面 -->
-        <activity android:name="com.example.newlitterfriend.control.acitivity.login.RegisterFragmentActivity" >
-        </activity>
+        <!-- 获取验证码页面 -->
+        <activity
+            android:name="com.example.newlitterfriend.control.acitivity.login.GetAuthCodeFragmentActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <!-- 输入验证码页面 -->
+        <activity
+            android:name="com.example.newlitterfriend.control.acitivity.login.InputAuthCodeFragmentActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <!-- 绑定角色页面 -->
+        <activity android:name="com.example.newlitterfriend.control.acitivity.login.BindRoleFragmentActivity" />
+        <!-- 个人信息页面 -->
+        <activity android:name="com.example.newlitterfriend.control.acitivity.login.PersonalInfoFragmentActivity" />
+        <!-- 注册成功页面 -->
+        <activity android:name="com.example.newlitterfriend.control.acitivity.login.RegisterSuccessFragmentActivity" />
+        <!-- 主页面 -->
+        <activity android:name="com.example.newlitterfriend.control.acitivity.main.MainFragmentActivity" />
     </application>
 
 </manifest>

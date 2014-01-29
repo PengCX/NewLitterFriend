@@ -27,6 +27,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class color {
         public static final int black=0x7f040001;
+        public static final int blue=0x7f040002;
+        public static final int red=0x7f040003;
         /**  基本颜色 
          */
         public static final int white=0x7f040000;
@@ -42,52 +44,97 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int exhibition_button_login_click=0x7f020000;
-        public static final int exhibition_button_login_normal=0x7f020001;
-        public static final int exhibition_button_login_selector=0x7f020002;
-        public static final int exhibition_button_register_click=0x7f020003;
-        public static final int exhibition_button_register_normal=0x7f020004;
-        public static final int exhibition_button_register_selector=0x7f020005;
-        public static final int exhibition_picture1=0x7f020006;
-        public static final int exhibition_picture2=0x7f020007;
-        public static final int exhibition_picture3=0x7f020008;
-        public static final int exhibition_picture4=0x7f020009;
-        public static final int exhibition_picture5=0x7f02000a;
-        public static final int ic_launcher=0x7f02000b;
-        public static final int login_button_login_click=0x7f02000c;
-        public static final int login_button_login_normal=0x7f02000d;
-        public static final int login_button_login_selector=0x7f02000e;
-        public static final int register_imageview_step_four=0x7f02000f;
-        public static final int register_imageview_step_one=0x7f020010;
-        public static final int register_imageview_step_three=0x7f020011;
-        public static final int register_imageview_step_two=0x7f020012;
-        public static final int splash_launcher=0x7f020013;
-        public static final int table_bottom_background=0x7f020014;
-        public static final int table_middle_background=0x7f020015;
-        public static final int table_top_background=0x7f020016;
-        public static final int titlebar_background=0x7f020017;
-        public static final int titlebar_imagebutton_back=0x7f020018;
+        public static final int authcode_button_resend_normal=0x7f020000;
+        public static final int authcode_button_resend_selector=0x7f020001;
+        public static final int authon_button_resend_click=0x7f020002;
+        public static final int bindrole_button_searchrole=0x7f020003;
+        public static final int bindrole_imageview_step=0x7f020004;
+        public static final int bindrole_textview_leftdrawable=0x7f020005;
+        public static final int checkbox_checked=0x7f020006;
+        public static final int checkbox_normal=0x7f020007;
+        public static final int checkbox_selector=0x7f020008;
+        public static final int checkbox_women_checked=0x7f020009;
+        public static final int exhibition_button_login_click=0x7f02000a;
+        public static final int exhibition_button_login_normal=0x7f02000b;
+        public static final int exhibition_button_login_selector=0x7f02000c;
+        public static final int exhibition_button_register_click=0x7f02000d;
+        public static final int exhibition_button_register_normal=0x7f02000e;
+        public static final int exhibition_button_register_selector=0x7f02000f;
+        public static final int exhibition_picture1=0x7f020010;
+        public static final int exhibition_picture2=0x7f020011;
+        public static final int exhibition_picture3=0x7f020012;
+        public static final int exhibition_picture4=0x7f020013;
+        public static final int exhibition_picture5=0x7f020014;
+        public static final int getauthcode_imageview_step=0x7f020015;
+        public static final int ic_launcher=0x7f020016;
+        public static final int login_button_login_click=0x7f020017;
+        public static final int login_button_login_normal=0x7f020018;
+        public static final int login_button_login_selector=0x7f020019;
+        public static final int man_radiobutton_selector=0x7f02001a;
+        public static final int men_radiobutton_checked=0x7f02001b;
+        public static final int men_radiobutton_normal=0x7f02001c;
+        public static final int personalinfo_imagebutton_photo_click=0x7f02001d;
+        public static final int personalinfo_imagebutton_photo_normal=0x7f02001e;
+        public static final int personalinfo_imagebutton_photo_selector=0x7f02001f;
+        public static final int personalinfo_imageview_photoprompt=0x7f020020;
+        public static final int personalinfo_imageview_step=0x7f020021;
+        public static final int registersuccess_imageview_step=0x7f020022;
+        public static final int splash_launcher=0x7f020023;
+        public static final int table_bottom_background=0x7f020024;
+        public static final int table_middle_background=0x7f020025;
+        public static final int table_top_background=0x7f020026;
+        public static final int titlebar_background=0x7f020027;
+        public static final int titlebar_imagebutton_back=0x7f020028;
+        public static final int woman_radiobutton_selector=0x7f020029;
+        public static final int women_radiobutton_checked=0x7f02002a;
+        public static final int women_radiobutton_normal=0x7f02002b;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000a;
-        public static final int exhibition_button_login=0x7f090001;
-        public static final int exhibition_button_register=0x7f090002;
-        public static final int exhibition_imageview_picture=0x7f090006;
-        public static final int exhibition_viewpager_pictures=0x7f090000;
-        public static final int login_titlebar=0x7f090003;
-        public static final int register_titlebar=0x7f090004;
-        public static final int splash_imageview_launcher=0x7f090005;
-        public static final int titlebar_imagebutton_left=0x7f090007;
-        public static final int titlebar_imagebutton_right=0x7f090009;
-        public static final int titlebar_textview_title=0x7f090008;
+        public static final int action_settings=0x7f09001f;
+        public static final int bindrole_button_bind=0x7f090002;
+        public static final int bindrole_button_searchrole=0x7f090003;
+        public static final int bindrole_textview_prompt=0x7f090001;
+        public static final int bindrole_titlebar=0x7f090000;
+        public static final int exhibition_button_login=0x7f090005;
+        public static final int exhibition_button_register=0x7f090006;
+        public static final int exhibition_imageview_picture=0x7f09001b;
+        public static final int exhibition_viewpager_pictures=0x7f090004;
+        public static final int getauthcode_button_getauthcode=0x7f09000c;
+        public static final int getauthcode_checkbox_isagree=0x7f09000a;
+        public static final int getauthcode_exittext_phonenumber=0x7f090009;
+        public static final int getauthcode_linearlayout_getauthcode=0x7f090008;
+        public static final int getauthcode_textview_protocol=0x7f09000b;
+        public static final int getauthcode_titlebar=0x7f090007;
+        public static final int inputauthcode_button_nextstep=0x7f090011;
+        public static final int inputauthcode_button_resend=0x7f090010;
+        public static final int inputauthcode_exittext_authcode=0x7f09000f;
+        public static final int inputauthcode_textview_alreadysend=0x7f09000e;
+        public static final int inputauthcode_titlebar=0x7f09000d;
+        public static final int login_button_login=0x7f090013;
+        public static final int login_titlebar=0x7f090012;
+        public static final int personalinfo_button_finish=0x7f090017;
+        public static final int personalinfo_imagebutton_photo=0x7f090016;
+        public static final int personalinfo_titlebar=0x7f090015;
+        public static final int registersuccess_button_tomain=0x7f090019;
+        public static final int registersuccess_titlebar=0x7f090018;
+        public static final int splash_imageview_launcher=0x7f09001a;
+        public static final int textView1=0x7f090014;
+        public static final int titlebar_imagebutton_left=0x7f09001c;
+        public static final int titlebar_imagebutton_right=0x7f09001e;
+        public static final int titlebar_textview_title=0x7f09001d;
     }
     public static final class layout {
-        public static final int activity_exhibition=0x7f030000;
-        public static final int activity_login=0x7f030001;
-        public static final int activity_register=0x7f030002;
-        public static final int activity_splash=0x7f030003;
-        public static final int fragment_exhibition=0x7f030004;
-        public static final int title_bar=0x7f030005;
+        public static final int activity_bindrole=0x7f030000;
+        public static final int activity_exhibition=0x7f030001;
+        public static final int activity_getauthcode=0x7f030002;
+        public static final int activity_inputauthcode=0x7f030003;
+        public static final int activity_login=0x7f030004;
+        public static final int activity_main=0x7f030005;
+        public static final int activity_personalinfo=0x7f030006;
+        public static final int activity_registersuccess=0x7f030007;
+        public static final int activity_splash=0x7f030008;
+        public static final int fragment_exhibition=0x7f030009;
+        public static final int title_bar=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -95,15 +142,24 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
+        /**  绑定角色页面 
+         */
+        public static final int bindrole_titlebar_text=0x7f060005;
+        /**  获取验证码页面 
+         */
+        public static final int getauthcode_titlebar_text=0x7f060003;
+        /**  输入验证码页面 
+         */
+        public static final int inputauthcode_titlebar_text=0x7f060004;
         /**  登陆页面 
          */
         public static final int login_titlebar_text=0x7f060002;
-        /**  注册页面 
+        /**  个人信息页面 
          */
-        public static final int register_titlebar_text1=0x7f060003;
-        public static final int register_titlebar_text2=0x7f060004;
-        public static final int register_titlebar_text3=0x7f060005;
-        public static final int register_titlebar_text4=0x7f060006;
+        public static final int personalinfo_titlebar_text=0x7f060006;
+        /**  完成注册页面 
+         */
+        public static final int registersuccess_titlebar_text=0x7f060007;
     }
     public static final class style {
         /** 

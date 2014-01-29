@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 个人信息页面头像按钮图片选择器 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按压状态 -->
+    <item android:drawable="@drawable/personalinfo_imagebutton_photo_click" android:state_pressed="true"/>
+    <!-- 获取焦点状态 -->
+    <item android:drawable="@drawable/personalinfo_imagebutton_photo_click" android:state_focused="true"/>
+    <!-- 其它状态 -->
+    <item android:drawable="@drawable/personalinfo_imagebutton_photo_normal"/>
+
+</selector>

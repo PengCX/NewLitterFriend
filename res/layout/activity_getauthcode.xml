@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 获取验证码页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.newlitterfriend"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <com.example.newlitterfriend.view.title.TitleBar
+        android:id="@+id/getauthcode_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:_fLeftButtonDrawableId="@drawable/titlebar_imagebutton_back"
+        app:_fTitleStringId="@string/getauthcode_titlebar_text" />
+
+    <!-- 获取验证码 -->
+
+    <LinearLayout
+        android:id="@+id/getauthcode_linearlayout_getauthcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 导航图片 -->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/getauthcode_imageview_step" />
+
+        <!-- 手机号 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/table_middle_background" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="手机号"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="?android:attr/textColorSecondaryInverse" />
+
+            <EditText
+                android:id="@+id/getauthcode_exittext_phonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:inputType="phone" />
+        </LinearLayout>
+
+        <!-- 同意协议 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
+
+            <CheckBox
+                android:id="@+id/getauthcode_checkbox_isagree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/checkbox_selector"
+                android:button="@null"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/getauthcode_textview_protocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="阅读并同意用户协议" />
+        </RelativeLayout>
+
+        <!-- 获取验证码按钮 -->
+
+        <Button
+            android:id="@+id/getauthcode_button_getauthcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/login_button_login_selector"
+            android:text="获取验证码"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        <!-- 提示 -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="输入您的手机号码, 免费注册小伙伴, 小伙伴不会在任何地方泄露你的手机号码"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorTertiaryInverse" />
+    </LinearLayout>
+
+</LinearLayout>

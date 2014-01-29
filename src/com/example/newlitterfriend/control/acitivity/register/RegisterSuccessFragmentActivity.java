@@ -1,4 +1,4 @@
-package com.example.newlitterfriend.control.acitivity.login;
+package com.example.newlitterfriend.control.acitivity.register;
 
 import roboguice.activity.RoboFragmentActivity;
 import roboguice.inject.InjectView;
@@ -15,32 +15,27 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 /**
- * 登陆页面
+ * 注册第四步注册完成页面
  * 
- * @author Administrator
+ * @author xiang_000
  * 
  */
-public class LoginFragmentActivity extends RoboFragmentActivity implements
-		TitleBarInterface,OnClickListener {
-	/** 视图引用：标题栏 */
-	@InjectView(R.id.login_titlebar)
+public class RegisterSuccessFragmentActivity extends RoboFragmentActivity
+		implements TitleBarInterface, OnClickListener {
+	/** 标题栏 */
+	@InjectView(R.id.registersuccess_titlebar)
 	TitleBar _fTitleBar;
-	/** 登陆按钮 */
-	@InjectView(R.id.login_button_login)
-	Button _fLoginButton;
+	/** 跳转主页面 */
+	@InjectView(R.id.registersuccess_button_tomain)
+	Button _fToMainButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_login);
+		setContentView(R.layout.activity_registersuccess);
 
 		_fTitleBar.set_fTitleBarInterface(this);
-		_fLoginButton.setOnClickListener(this);
-	}
-
-	@Override
-	public void setLeftButtonClick() {
-		finish();
+		_fToMainButton.setOnClickListener(this);
 	}
 
 	@Override
@@ -49,10 +44,15 @@ public class LoginFragmentActivity extends RoboFragmentActivity implements
 	}
 
 	@Override
+	public void setLeftButtonClick() {
+		finish();
+	}
+
+	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.login_button_login:
-			Intent intent = new Intent(this,MainFragmentActivity.class);
+		case R.id.registersuccess_button_tomain:
+			Intent intent = new Intent(this, MainFragmentActivity.class);
 			startActivity(intent);
 			break;
 

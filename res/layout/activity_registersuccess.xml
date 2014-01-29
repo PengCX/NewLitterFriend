@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 注册完成页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.newlitterfriend"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <com.example.newlitterfriend.view.title.TitleBar
+        android:id="@+id/registersuccess_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:_fLeftButtonDrawableId="@drawable/titlebar_imagebutton_back"
+        app:_fTitleStringId="@string/registersuccess_titlebar_text" />
+    <!-- 导航图片 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/registersuccess_imageview_step" />
+    <!-- 提示 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="恭喜你，注册成功！点击按钮进入主界面。"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/red" />
+
+    <!-- 获取验证码按钮 -->
+
+    <Button
+        android:id="@+id/registersuccess_button_tomain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/login_button_login_selector"
+        android:text="进入主界面"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="?android:attr/textColorPrimary" />
+
+</LinearLayout>

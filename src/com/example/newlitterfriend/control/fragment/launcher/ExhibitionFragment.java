@@ -15,11 +15,11 @@ import android.view.ViewGroup;
  * 
  */
 public class ExhibitionFragment extends Fragment {
-	/**传递图片索引参数key*/
+	/** 传递图片索引参数key */
 	public static final String PICTURE_INDEX = "pictureindex";
-	/**图片的数目*/
+	/** 图片的数目 */
 	public static final int PICTURE_NUM = 5;
-	
+
 	/** 图片资源数组 */
 	private int[] _fPicturesIds = { R.drawable.exhibition_picture1,
 			R.drawable.exhibition_picture2, R.drawable.exhibition_picture3,
@@ -31,7 +31,7 @@ public class ExhibitionFragment extends Fragment {
 		View rootView = inflater.inflate(R.layout.fragment_exhibition,
 				container, false);
 
-		//设置显示的图片
+		// 设置显示的图片
 		Bundle args = getArguments();
 		rootView.findViewById(R.id.exhibition_imageview_picture)
 				.setBackgroundResource(

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 个人信息页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.newlitterfriend"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <com.example.newlitterfriend.view.title.TitleBar
+        android:id="@+id/personalinfo_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:_fLeftButtonDrawableId="@drawable/titlebar_imagebutton_back"
+        app:_fTitleStringId="@string/personalinfo_titlebar_text" />
+    <!-- 导航图片 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/personalinfo_imageview_step" />
+    <!-- 照片 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" >
+
+        <ImageButton
+            android:id="@+id/personalinfo_imagebutton_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/personalinfo_imagebutton_photo_selector" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/personalinfo_imagebutton_photo"
+            android:src="@drawable/personalinfo_imageview_photoprompt" />
+    </RelativeLayout>
+
+    <!-- 性别 -->
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <!-- 男 -->
+
+        <RadioButton
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:button="@drawable/man_radiobutton_selector" />
+        <!-- 女 -->
+
+        <RadioButton
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:button="@drawable/woman_radiobutton_selector" />
+    </RadioGroup>
+
+    <!-- 登陆输入表格 -->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:stretchColumns="1" >
+
+        <!-- 昵称 -->
+
+        <TableRow android:background="@drawable/table_top_background" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="昵    称"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="?android:attr/textColorSecondaryInverse" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@color/white" />
+        </TableRow>
+
+        <!-- 生日 -->
+
+        <TableRow android:background="@drawable/table_middle_background" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="生    日"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="?android:attr/textColorSecondaryInverse" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="19900101"
+                android:inputType="number" />
+        </TableRow>
+
+        <!-- 登陆密码 -->
+
+        <TableRow android:background="@drawable/table_bottom_background" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="登陆密码"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="?android:attr/textColorSecondaryInverse" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="输入6位以上"
+                android:inputType="textPassword" />
+        </TableRow>
+
+        <!-- 找回邮箱 -->
+
+        <TableRow android:background="@drawable/table_bottom_background" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="找回邮箱"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="?android:attr/textColorSecondaryInverse" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:hint="用于找回密码"
+                android:inputType="textEmailAddress" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- 完成注册按钮 -->
+
+    <Button
+        android:id="@+id/personalinfo_button_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/login_button_login_selector"
+        android:text="完成注册"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="?android:attr/textColorPrimary" />
+
+</LinearLayout>
