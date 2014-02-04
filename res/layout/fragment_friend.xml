@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 朋友页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.newlitterfriend"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <com.example.newlitterfriend.view.title.TitleBar
+        android:id="@+id/friend_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:_fTitleStringId="@string/friend_titlebar_text" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/friend_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

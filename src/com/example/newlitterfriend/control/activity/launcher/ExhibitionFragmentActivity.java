@@ -1,11 +1,11 @@
-package com.example.newlitterfriend.control.acitivity.launcher;
+package com.example.newlitterfriend.control.activity.launcher;
 
 import roboguice.activity.RoboFragmentActivity;
 import roboguice.inject.InjectView;
 
 import com.example.newlitterfriend.R;
-import com.example.newlitterfriend.control.acitivity.login.LoginFragmentActivity;
-import com.example.newlitterfriend.control.acitivity.register.GetAuthCodeFragmentActivity;
+import com.example.newlitterfriend.control.activity.login.LoginFragmentActivity;
+import com.example.newlitterfriend.control.activity.register.GetAuthCodeFragmentActivity;
 import com.example.newlitterfriend.control.adapter.ExihibitionPagerAdapter;
 
 import android.content.Intent;
@@ -44,9 +44,8 @@ public class ExhibitionFragmentActivity extends RoboFragmentActivity {
 	 * 初始化图片ViewPager的显示
 	 */
 	private void initPicturesViewPagerShow() {
-		ExihibitionPagerAdapter exihibitionPagerAdapter = new ExihibitionPagerAdapter(
-				getSupportFragmentManager());
-		_fPicturesViewPager.setAdapter(exihibitionPagerAdapter);
+		_fPicturesViewPager.setAdapter(new ExihibitionPagerAdapter(
+				getSupportFragmentManager()));
 	}
 
 	/**
@@ -56,7 +55,7 @@ public class ExhibitionFragmentActivity extends RoboFragmentActivity {
 	 *            登陆按钮视图
 	 */
 	public void turnToLoginPager(View view) {
-		Intent intent = new Intent(this,LoginFragmentActivity.class);
+		Intent intent = new Intent(this, LoginFragmentActivity.class);
 		startActivity(intent);
 	}
 
@@ -67,7 +66,7 @@ public class ExhibitionFragmentActivity extends RoboFragmentActivity {
 	 *            注册按钮视图
 	 */
 	public void turnToRegisterPager(View view) {
-		Intent intent = new Intent(this,GetAuthCodeFragmentActivity.class);
+		Intent intent = new Intent(this, GetAuthCodeFragmentActivity.class);
 		startActivity(intent);
 	}
 }

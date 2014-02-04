@@ -1,9 +1,10 @@
 package com.example.newlitterfriend.control.fragment.launcher;
 
+import roboguice.fragment.RoboFragment;
+
 import com.example.newlitterfriend.R;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +15,7 @@ import android.view.ViewGroup;
  * @author Administrator
  * 
  */
-public class ExhibitionFragment extends Fragment {
+public class ExhibitionFragment extends RoboFragment {
 	/** 传递图片索引参数key */
 	public static final String PICTURE_INDEX = "pictureindex";
 	/** 图片的数目 */

@@ -1,4 +1,4 @@
-package com.example.newlitterfriend.control.acitivity.launcher;
+package com.example.newlitterfriend.control.activity.launcher;
 
 import java.util.Timer;
 import java.util.TimerTask;

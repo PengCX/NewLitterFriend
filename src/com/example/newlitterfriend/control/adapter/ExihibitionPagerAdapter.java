@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 /**
- * 展示ViewPager
+ * 展示页面ViewPager适配器
  * 
  * @author Administrator
  * 

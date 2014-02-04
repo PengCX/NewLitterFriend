@@ -1,4 +1,4 @@
-package com.example.newlitterfriend.control.acitivity.register;
+package com.example.newlitterfriend.control.activity.register;
 
 import com.example.newlitterfriend.R;
 import com.example.newlitterfriend.view.title.TitleBar;
