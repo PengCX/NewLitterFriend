@@ -8,15 +8,15 @@ import android.os.Bundle;
 
 /**
  * 我页面
- * 
+ *
  * @author Dell
- * 
+ *
  */
 public class MySelfFragmentActivity extends RoboFragmentActivity {
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.fragment_myself);
+		setContentView(R.layout.activity_myself);
 	}
 }

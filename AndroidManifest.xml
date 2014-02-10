@@ -4,6 +4,8 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-sdk
         android:minSdkVersion="7"
         android:targetSdkVersion="18" />
@@ -24,7 +26,9 @@
             </intent-filter>
         </activity>
         <!-- 展示页面 -->
-        <activity android:name="com.example.newlitterfriend.control.activity.launcher.ExhibitionFragmentActivity" >
+        <activity
+            android:name="com.example.newlitterfriend.control.activity.launcher.ExhibitionFragmentActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
         </activity>
         <!-- 登陆页面 -->
         <activity
@@ -40,23 +44,28 @@
             android:name="com.example.newlitterfriend.control.activity.register.InputAuthCodeFragmentActivity"
             android:windowSoftInputMode="stateAlwaysVisible" />
         <!-- 绑定角色页面 -->
-        <activity android:name="com.example.newlitterfriend.control.activity.register.BindRoleFragmentActivity" />
+        <activity android:name=".control.activity.register.BindRoleFragmentActivity" />
         <!-- 个人信息页面 -->
-        <activity android:name="com.example.newlitterfriend.control.activity.register.PersonalInfoFragmentActivity" />
+        <activity android:name=".control.activity.register.PersonalInfoFragmentActivity" />
         <!-- 注册成功页面 -->
-        <activity android:name="com.example.newlitterfriend.control.activity.register.RegisterSuccessFragmentActivity" />
+        <activity android:name=".control.activity.register.RegisterSuccessFragmentActivity" />
         <!-- 主页面 -->
-        <activity android:name="com.example.newlitterfriend.control.activity.main.MainFragmentActivity" />
+        <activity android:name=".control.activity.main.MainActivityGroup" />
         <!-- 消息页面 -->
-        <activity android:name="com.example.newlitterfriend.control.activity.main.message.MessageFragmentActivity" />
+        <activity android:name=".control.activity.main.message.MessageFragmentActivity" />
+        <!-- 聊天页面 -->
+        <activity android:name=".control.activity.main.message.ChatFragmentActivity" />
         <!-- 朋友页面 -->
-        <activity
-            android:name="com.example.newlitterfriend.control.activity.main.friend.FriendActionBarActivity"
-            android:theme="@style/Theme.AppCompat.Light" />
+        <activity android:name=".control.activity.main.friend.FriendActivityGroup" />
+        <!-- 好友页面 -->
+        <activity android:name=".control.activity.main.friend.GoodFriendFragmentActivity" />
+        <!-- 关注页面 -->
+        <activity android:name=".control.activity.main.friend.AttentionFragmentActivity" />
+        <!-- 粉丝页面 -->
+        <activity android:name=".control.activity.main.friend.FansFragmentActivity" />
         <!-- 发现页面 -->
-        <activity android:name="com.example.newlitterfriend.control.activity.main.discover.DiscoverFragmentActivity" />
+        <activity android:name=".control.activity.main.discover.DiscoverFragmentActivity" />
         <!-- 自我页面 -->
-        <activity android:name="com.example.newlitterfriend.control.activity.main.myself.MySelfFragmentActivity" />
+        <activity android:name=".control.activity.main.myself.MySelfFragmentActivity" />
     </application>
-
 </manifest>

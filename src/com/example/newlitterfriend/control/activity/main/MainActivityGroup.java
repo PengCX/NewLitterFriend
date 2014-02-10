@@ -2,27 +2,25 @@ package com.example.newlitterfriend.control.activity.main;
 
 import com.example.newlitterfriend.R;
 import com.example.newlitterfriend.control.activity.main.discover.DiscoverFragmentActivity;
-import com.example.newlitterfriend.control.activity.main.friend.FriendActionBarActivity;
+import com.example.newlitterfriend.control.activity.main.friend.FriendActivityGroup;
 import com.example.newlitterfriend.control.activity.main.message.MessageFragmentActivity;
 import com.example.newlitterfriend.control.activity.main.myself.MySelfFragmentActivity;
 import com.google.inject.Inject;
 
-import android.app.LocalActivityManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.widget.TabHost;
 import roboguice.activity.RoboActivityGroup;
-import roboguice.activity.RoboFragmentActivity;
 import roboguice.inject.InjectView;
 
 /**
  * 主界面
- * 
+ *
  * @author Administrator
- * 
+ *
  */
-public class MainFragmentActivity extends RoboActivityGroup {
+public class MainActivityGroup extends RoboActivityGroup {
 	/** TabHost对象 */
 	@InjectView(android.R.id.tabhost)
 	TabHost _fTabHost;
@@ -43,8 +41,8 @@ public class MainFragmentActivity extends RoboActivityGroup {
 	 * 初始化选项卡显示
 	 */
 	private void initTabHostShow() {
-		_fTabHost.setup(getLocalActivityManager());  
-		
+		_fTabHost.setup(getLocalActivityManager());
+
 		_fTabHost.addTab(_fTabHost
 				.newTabSpec("message")
 				.setIndicator(
@@ -56,7 +54,7 @@ public class MainFragmentActivity extends RoboActivityGroup {
 				.setIndicator(
 						_fLayoutInflater
 								.inflate(R.layout.main_tab_friend, null))
-				.setContent(new Intent(this, FriendActionBarActivity.class)));
+				.setContent(new Intent(this, FriendActivityGroup.class)));
 		_fTabHost.addTab(_fTabHost
 				.newTabSpec("discover")
 				.setIndicator(

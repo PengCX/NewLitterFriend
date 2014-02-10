@@ -6,7 +6,7 @@ import roboguice.inject.InjectView;
 import com.example.newlitterfriend.R;
 import com.example.newlitterfriend.control.activity.login.LoginFragmentActivity;
 import com.example.newlitterfriend.control.activity.register.GetAuthCodeFragmentActivity;
-import com.example.newlitterfriend.control.adapter.ExihibitionPagerAdapter;
+import com.example.newlitterfriend.control.adapter.launcher.ExihibitionPagerAdapter;
 
 import android.content.Intent;
 import android.os.Bundle;

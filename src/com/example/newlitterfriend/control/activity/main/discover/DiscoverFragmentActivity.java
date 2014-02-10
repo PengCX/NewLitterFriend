@@ -11,10 +11,10 @@ import android.os.Bundle;
  *
  */
 public class DiscoverFragmentActivity extends RoboFragmentActivity{
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.fragment_discover);
+		setContentView(R.layout.activity_discover);
 	}
 }

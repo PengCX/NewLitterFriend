@@ -1,4 +1,4 @@
-package com.example.newlitterfriend.control.adapter;
+package com.example.newlitterfriend.control.adapter.launcher;
 
 import com.example.newlitterfriend.control.fragment.launcher.ExhibitionFragment;
 

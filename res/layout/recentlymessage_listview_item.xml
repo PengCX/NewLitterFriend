@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 最近消息列表列表项 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="5dp" >
+
+    <!-- 头像 -->
+
+    <ImageView
+        android:id="@+id/recentlymessage_listitem_imageview_usericon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/recentlymessage_listitem_goodfriendrecommend" />
+    <!-- 用户名 -->
+
+    <TextView
+        android:id="@+id/recentlymessage_listitem_textview_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/recentlymessage_listitem_imageview_usericon"
+        android:text="haoyou"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+    <!-- 消息 -->
+
+    <TextView
+        android:id="@+id/recentlymessage_listitem_textview_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recentlymessage_listitem_textview_username"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/recentlymessage_listitem_imageview_usericon"
+        android:text="aaaaa" />
+
+    <!-- 接收时间 -->
+
+    <TextView
+        android:id="@+id/recentlymessage_listitem_textview_recivetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="上午 8:56:32" />
+
+</RelativeLayout>

@@ -4,7 +4,7 @@ import roboguice.activity.RoboFragmentActivity;
 import roboguice.inject.InjectView;
 
 import com.example.newlitterfriend.R;
-import com.example.newlitterfriend.control.activity.main.MainFragmentActivity;
+import com.example.newlitterfriend.control.activity.main.MainActivityGroup;
 import com.example.newlitterfriend.view.title.TitleBar;
 import com.example.newlitterfriend.view.title.TitleBarInterface;
 
@@ -52,7 +52,7 @@ public class RegisterSuccessFragmentActivity extends RoboFragmentActivity
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.registersuccess_button_tomain:
-			Intent intent = new Intent(this, MainFragmentActivity.class);
+			Intent intent = new Intent(this, MainActivityGroup.class);
 			startActivity(intent);
 			break;
 

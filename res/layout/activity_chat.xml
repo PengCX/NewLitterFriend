@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 朋友页面 -->
+<!-- 聊天页面 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res/com.example.newlitterfriend"
     android:layout_width="match_parent"
@@ -10,13 +10,15 @@
     <!-- 标题 -->
 
     <com.example.newlitterfriend.view.title.TitleBar
-        android:id="@+id/friend_titlebar"
+        android:id="@+id/chat_titlebar"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        app:_fTitleStringId="@string/friend_titlebar_text" />
+        app:_fTitleStringId="@string/message_titlebar_text" />
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/friend_viewpager"
+    <!-- 消息列表 -->
+
+    <ListView
+        android:id="@+id/message_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

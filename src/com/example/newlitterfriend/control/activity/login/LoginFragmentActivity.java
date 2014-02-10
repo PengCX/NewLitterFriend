@@ -1,10 +1,15 @@
 package com.example.newlitterfriend.control.activity.login;
 
+import org.jivesoftware.smack.Connection;
+import org.jivesoftware.smack.ConnectionConfiguration;
+import org.jivesoftware.smack.XMPPConnection;
+import org.jivesoftware.smack.XMPPException;
+
 import roboguice.activity.RoboFragmentActivity;
 import roboguice.inject.InjectView;
 
 import com.example.newlitterfriend.R;
-import com.example.newlitterfriend.control.activity.main.MainFragmentActivity;
+import com.example.newlitterfriend.control.activity.main.MainActivityGroup;
 import com.example.newlitterfriend.control.activity.register.GetAuthCodeFragmentActivity;
 import com.example.newlitterfriend.view.title.TitleBar;
 import com.example.newlitterfriend.view.title.TitleBarInterface;
@@ -18,9 +23,9 @@ import android.widget.TextView;
 
 /**
  * 登陆页面
- * 
+ *
  * @author Administrator
- * 
+ *
  */
 public class LoginFragmentActivity extends RoboFragmentActivity implements
 		TitleBarInterface, OnClickListener {
@@ -58,7 +63,15 @@ public class LoginFragmentActivity extends RoboFragmentActivity implements
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.login_button_login:
-			Intent intent = new Intent(this, MainFragmentActivity.class);
+			new Thread(new Runnable() {
+
+				@Override
+				public void run() {
+					loginOpenFireServer();
+				}
+			}).start();
+
+			Intent intent = new Intent(this, MainActivityGroup.class);
 			startActivity(intent);
 			break;
 		case R.id.login_textview_newuserregister:
@@ -67,6 +80,27 @@ public class LoginFragmentActivity extends RoboFragmentActivity implements
 			break;
 		default:
 			break;
+		}
+	}
+
+	/**
+	 * 登陆OpenFire服务器
+	 */
+	private void loginOpenFireServer() {
+		ConnectionConfiguration config = new ConnectionConfiguration(
+				"192.168.1.108", 5222, "pengcx");
+		config.setCompressionEnabled(true);
+		config.setSASLAuthenticationEnabled(true);
+
+		Connection connection = new XMPPConnection(config);
+
+		try {
+			connection.connect();
+			connection.login("pengcx", "pengcx", "pengcx");
+			connection.getChatManager().createChat("admin", null)
+					.sendMessage("Hello word!");
+		} catch (XMPPException e) {
+			e.printStackTrace();
 		}
 	}
 }
