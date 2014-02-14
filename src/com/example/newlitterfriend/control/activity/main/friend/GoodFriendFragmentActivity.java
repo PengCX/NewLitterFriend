@@ -7,9 +7,9 @@ import roboguice.activity.RoboFragmentActivity;
 
 /**
  * 好友页面
- *
+ * 
  * @author Dell
- *
+ * 
  */
 public class GoodFriendFragmentActivity extends RoboFragmentActivity {
 

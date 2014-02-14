@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 分组索引列表 -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 列表 -->
+
+    <ListView
+        android:id="@+id/groupindex_listview_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 索引显示 -->
+
+    <TextView
+        android:id="@+id/groudindex_textview_index"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="#f0606060"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="#ffffff"
+        android:textSize="30sp" />
+
+    <!-- 索引条 -->
+    <LinearLayout
+        android:id="@+id/groupindex_linearlayout_indexbar"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="right"
+        android:background="#d7d7d7"
+        android:gravity="center"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</merge>

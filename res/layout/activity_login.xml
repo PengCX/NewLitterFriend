@@ -59,6 +59,7 @@
                 android:textColor="?android:attr/textColorSecondaryInverse" />
 
             <EditText
+                android:id="@+id/login_edittext_phonenumber"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"
@@ -81,6 +82,7 @@
                 android:textColor="?android:attr/textColorSecondaryInverse" />
 
             <EditText
+                android:id="@+id/login_edittext_password"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="1dp"

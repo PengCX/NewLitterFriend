@@ -109,7 +109,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int women_radiobutton_normal=0x7f02003e;
     }
     public static final class id {
-        public static final int action_settings=0x7f09002b;
+        public static final int action_settings=0x7f090030;
         public static final int bindrole_button_bind=0x7f090003;
         public static final int bindrole_button_searchrole=0x7f090004;
         public static final int bindrole_textview_prompt=0x7f090002;
@@ -118,7 +118,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int discover_titlebar=0x7f090007;
         public static final int exhibition_button_login=0x7f090009;
         public static final int exhibition_button_register=0x7f09000a;
-        public static final int exhibition_imageview_picture=0x7f090022;
+        public static final int exhibition_imageview_picture=0x7f090024;
         public static final int exhibition_viewpager_pictures=0x7f090008;
         public static final int friend_titlebar=0x7f09000b;
         public static final int getauthcode_button_getauthcode=0x7f090011;
@@ -127,32 +127,37 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int getauthcode_linearlayout_getauthcode=0x7f09000d;
         public static final int getauthcode_textview_protocol=0x7f090010;
         public static final int getauthcode_titlebar=0x7f09000c;
+        public static final int groudindex_textview_index=0x7f090027;
+        public static final int groupindex_linearlayout_indexbar=0x7f090028;
+        public static final int groupindex_listview_listview=0x7f090026;
         public static final int inputauthcode_button_nextstep=0x7f090016;
         public static final int inputauthcode_button_resend=0x7f090015;
         public static final int inputauthcode_exittext_authcode=0x7f090014;
         public static final int inputauthcode_textview_alreadysend=0x7f090013;
         public static final int inputauthcode_titlebar=0x7f090012;
-        public static final int login_button_login=0x7f090018;
-        public static final int login_textview_newuserregister=0x7f090019;
+        public static final int login_button_login=0x7f09001a;
+        public static final int login_edittext_password=0x7f090019;
+        public static final int login_edittext_phonenumber=0x7f090018;
+        public static final int login_textview_newuserregister=0x7f09001b;
         public static final int login_titlebar=0x7f090017;
-        public static final int main_tab_textview_message=0x7f090023;
+        public static final int main_tab_textview_message=0x7f090025;
         public static final int message_listview=0x7f090006;
-        public static final int message_titlebar=0x7f09001a;
-        public static final int myself_titlebar=0x7f09001b;
-        public static final int personalinfo_button_finish=0x7f09001e;
-        public static final int personalinfo_imagebutton_photo=0x7f09001d;
-        public static final int personalinfo_titlebar=0x7f09001c;
-        public static final int recentlymessage_listitem_imageview_usericon=0x7f090024;
-        public static final int recentlymessage_listitem_textview_message=0x7f090026;
-        public static final int recentlymessage_listitem_textview_recivetime=0x7f090027;
-        public static final int recentlymessage_listitem_textview_username=0x7f090025;
-        public static final int registersuccess_button_tomain=0x7f090020;
-        public static final int registersuccess_titlebar=0x7f09001f;
-        public static final int splash_imageview_launcher=0x7f090021;
+        public static final int message_titlebar=0x7f09001c;
+        public static final int myself_titlebar=0x7f09001d;
+        public static final int personalinfo_button_finish=0x7f090020;
+        public static final int personalinfo_imagebutton_photo=0x7f09001f;
+        public static final int personalinfo_titlebar=0x7f09001e;
+        public static final int recentlymessage_listitem_imageview_usericon=0x7f090029;
+        public static final int recentlymessage_listitem_textview_message=0x7f09002b;
+        public static final int recentlymessage_listitem_textview_recivetime=0x7f09002c;
+        public static final int recentlymessage_listitem_textview_username=0x7f09002a;
+        public static final int registersuccess_button_tomain=0x7f090022;
+        public static final int registersuccess_titlebar=0x7f090021;
+        public static final int splash_imageview_launcher=0x7f090023;
         public static final int textView1=0x7f090000;
-        public static final int titlebar_imagebutton_left=0x7f090028;
-        public static final int titlebar_imagebutton_right=0x7f09002a;
-        public static final int titlebar_textview_title=0x7f090029;
+        public static final int titlebar_imagebutton_left=0x7f09002d;
+        public static final int titlebar_imagebutton_right=0x7f09002f;
+        public static final int titlebar_textview_title=0x7f09002e;
     }
     public static final class layout {
         public static final int activity_attention=0x7f030000;
@@ -176,12 +181,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int friend_tab_attention=0x7f030012;
         public static final int friend_tab_fans=0x7f030013;
         public static final int friend_tab_googlefriend=0x7f030014;
-        public static final int main_tab_discover=0x7f030015;
-        public static final int main_tab_friend=0x7f030016;
-        public static final int main_tab_message=0x7f030017;
-        public static final int main_tab_myself=0x7f030018;
-        public static final int recentlymessage_listview_item=0x7f030019;
-        public static final int title_bar=0x7f03001a;
+        public static final int groupindex_listview=0x7f030015;
+        public static final int main_tab_discover=0x7f030016;
+        public static final int main_tab_friend=0x7f030017;
+        public static final int main_tab_message=0x7f030018;
+        public static final int main_tab_myself=0x7f030019;
+        public static final int recentlymessage_listview_item=0x7f03001a;
+        public static final int title_bar=0x7f03001b;
     }
     public static final class menu {
         public static final int main=0x7f080000;

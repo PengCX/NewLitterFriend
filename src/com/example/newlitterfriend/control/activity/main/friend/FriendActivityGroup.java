@@ -13,9 +13,9 @@ import android.widget.TabHost;
 
 /**
  * 朋友页面
- *
+ * 
  * @author Dell
- *
+ * 
  */
 public class FriendActivityGroup extends RoboActivityGroup {
 	/** TabHost对象 */
@@ -31,14 +31,24 @@ public class FriendActivityGroup extends RoboActivityGroup {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_friend);
 
+		initTabHostShow();
+	}
+
+	/**
+	 * 初始化选项卡的显示
+	 */
+	private void initTabHostShow() {
 		_fTabHost.setup(getLocalActivityManager());
 
-		_fTabHost.addTab(_fTabHost
-				.newTabSpec("goodfriend")
-				.setIndicator(
-						_fLayoutInflater.inflate(
-								R.layout.friend_tab_googlefriend, null))
-				.setContent(new Intent(this, GoodFriendFragmentActivity.class)));
+		_fTabHost
+				.addTab(_fTabHost
+						.newTabSpec("goodfriend")
+						.setIndicator(
+								_fLayoutInflater.inflate(
+										R.layout.friend_tab_googlefriend, null))
+						.setContent(
+								new Intent(this,
+										GoodFriendFragmentActivity.class)));
 		_fTabHost.addTab(_fTabHost
 				.newTabSpec("attention")
 				.setIndicator(
