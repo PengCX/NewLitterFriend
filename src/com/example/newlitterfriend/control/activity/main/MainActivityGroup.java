@@ -16,9 +16,9 @@ import roboguice.inject.InjectView;
 
 /**
  * 主界面
- *
+ * 
  * @author Administrator
- *
+ * 
  */
 public class MainActivityGroup extends RoboActivityGroup {
 	/** TabHost对象 */

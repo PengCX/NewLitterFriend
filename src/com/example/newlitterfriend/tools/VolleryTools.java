@@ -1,4 +1,4 @@
-package com.example.newlitterfriend.control.http;
+package com.example.newlitterfriend.tools;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -10,7 +10,7 @@ import com.loopj.android.http.RequestParams;
  * @author Administrator
  * 
  */
-public class NewLitterFriendClient {
+public class VolleryTools {
 	/** 服务器基本地址 */
 	private static final String BASE_URL = "http://58.83.193.120";
 	/** 服务器post请求地址 */

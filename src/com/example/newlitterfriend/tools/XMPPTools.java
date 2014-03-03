@@ -1,4 +1,4 @@
-package com.example.newlitterfriend.control.xmpp;
+package com.example.newlitterfriend.tools;
 
 import java.util.Collection;
 

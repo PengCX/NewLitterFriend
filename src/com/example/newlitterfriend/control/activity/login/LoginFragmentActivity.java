@@ -1,31 +1,32 @@
 package com.example.newlitterfriend.control.activity.login;
 
-import java.util.UUID;
-
-import org.json.JSONObject;
-
 import roboguice.activity.RoboFragmentActivity;
 import roboguice.inject.InjectView;
 
 import com.example.newlitterfriend.R;
+import com.example.newlitterfriend.control.activity.BaseRoboFragmentActivity;
+import com.example.newlitterfriend.control.activity.main.MainActivityGroup;
 import com.example.newlitterfriend.control.activity.register.GetAuthCodeFragmentActivity;
-import com.example.newlitterfriend.control.http.NewLitterFriendClient;
+import com.example.newlitterfriend.control.asynctask.LoginAsyncTask;
+import com.example.newlitterfriend.control.http.SoftWareInfo;
+import com.example.newlitterfriend.control.watcher.BaseTextWatcher;
+import com.example.newlitterfriend.model.bean.login.UserInfo;
+import com.example.newlitterfriend.model.exception.login.PasswordFormatErrorException;
+import com.example.newlitterfriend.model.exception.login.PhoneNumberFormatErrorException;
+import com.example.newlitterfriend.model.json.BaseJackSonBean;
+import com.example.newlitterfriend.model.json.login.LoginResult;
 import com.example.newlitterfriend.view.title.TitleBar;
 import com.example.newlitterfriend.view.title.TitleBarInterface;
-import com.loopj.android.http.JsonHttpResponseHandler;
-import com.loopj.android.http.RequestParams;
+import com.google.inject.Inject;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.telephony.TelephonyManager;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * 登陆页面
@@ -33,8 +34,8 @@ import android.widget.TextView;
  * @author Administrator
  * 
  */
-public class LoginFragmentActivity extends RoboFragmentActivity implements
-		TitleBarInterface, OnClickListener {
+public class LoginFragmentActivity extends BaseRoboFragmentActivity implements
+		TitleBarInterface {
 	/** 标题栏 */
 	@InjectView(R.id.login_titlebar)
 	TitleBar _fTitleBar;
@@ -52,14 +53,23 @@ public class LoginFragmentActivity extends RoboFragmentActivity implements
 	@InjectView(R.id.login_textview_newuserregister)
 	TextView _fNewUerRegister;
 
+	/** 用户登录信息 */
+	@Inject
+	UserInfo _fUserInfo;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
 
 		_fTitleBar.set_fTitleBarInterface(this);
-		_fLoginButton.setOnClickListener(this);
-		_fNewUerRegister.setOnClickListener(this);
+
+		_fLoginButton.setOnClickListener(new ButtonClick());
+		_fNewUerRegister.setOnClickListener(new ButtonClick());
+
+		_fPhoneNumberEditText
+				.addTextChangedListener(new PhoneEditTextWatcher());
+		_fPassWordEditText.addTextChangedListener(new PasswordEditTextWather());
 	}
 
 	@Override
@@ -72,64 +82,83 @@ public class LoginFragmentActivity extends RoboFragmentActivity implements
 
 	}
 
-	@Override
-	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.login_button_login:
-			String phoneNumber = _fPhoneNumberEditText.getText().toString();
-			String passWord = _fPassWordEditText.getText().toString();
+	/**
+	 * 按钮点击事件监听
+	 * 
+	 * @author Administrator
+	 * 
+	 */
+	class ButtonClick implements OnClickListener {
 
-			RequestParams params = new RequestParams();
-			// 共同的参数
-			params.put("method", "101");
-			params.put("channel", "14");
-			params.put("token", "");
-			params.put("sn", getUUIDStr());
-			params.put("encrypt", "false");
-			params.put("compression", "false");
-			params.put("version", "1.0.0");
-			params.put("mac", getMac());
-			params.put("imei", getIMEI());
+		@Override
+		public void onClick(View v) {
+			switch (v.getId()) {
+			case R.id.login_button_login:
+				try {
+					new LoginAsyncTask(LoginFragmentActivity.this, false)
+							.execute(_fUserInfo.getPhoneNumber(),
+									_fUserInfo.getPassWord());
+				} catch (PhoneNumberFormatErrorException e) {
+					// 手机号码格式错误
+					e.printStackTrace();
+					Toast.makeText(LoginFragmentActivity.this, e.getMessage(),
+							Toast.LENGTH_SHORT).show();
+				} catch (PasswordFormatErrorException e) {
+					// 密码格式错误
+					e.printStackTrace();
+					Toast.makeText(LoginFragmentActivity.this, e.getMessage(),
+							Toast.LENGTH_SHORT).show();
+				}
 
-			// 特殊的参数
-			RequestParams subParams = new RequestParams();
-			subParams.put("username", "13501141025");
-			subParams.put("password", "111111");
-			params.put("params", subParams);
-
-			NewLitterFriendClient.post(NewLitterFriendClient.URL_POST, params,
-					new JsonHttpResponseHandler() {
-						@Override
-						public void onSuccess(JSONObject response) {
-							super.onSuccess(response);
-						}
-					});
-
-			break;
-		case R.id.login_textview_newuserregister:
-			Intent intent2 = new Intent(this, GetAuthCodeFragmentActivity.class);
-			startActivity(intent2);
-			break;
-		default:
-			break;
+				break;
+			case R.id.login_textview_newuserregister:
+				startActivity(GetAuthCodeFragmentActivity.class);
+				break;
+			default:
+				break;
+			}
 		}
 	}
 
-	public String getUUIDStr() {
-		UUID uuid = UUID.randomUUID();
-		String uuidstr = uuid.toString();
-		return uuidstr;
+	/**
+	 * 处理登陆异步任务成功
+	 * 
+	 * @param aResultJackSonBean
+	 */
+	public void handleLoginAsyncTaskSuccess(BaseJackSonBean aResultJackSonBean) {
+		SoftWareInfo.TOKEN_ID = ((LoginResult) aResultJackSonBean).getEntity()
+				.getToken().getToken();
+		startActivity(MainActivityGroup.class);
 	}
 
-	public String getMac() {
-		WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
-		WifiInfo info = wifi.getConnectionInfo();
-		return info.getMacAddress();
+	/**
+	 * 手机号文本框文本监听器
+	 * 
+	 * @author Administrator
+	 * 
+	 */
+	class PhoneEditTextWatcher extends BaseTextWatcher {
+
+		@Override
+		public void onTextChanged(CharSequence s, int start, int before,
+				int count) {
+			_fUserInfo.set_fPhoneNumber(s.toString());
+		}
+
 	}
 
-	public String getIMEI() {
-		String Imei = ((TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE))
-				.getDeviceId();
-		return Imei;
+	/**
+	 * 密码文本框监听器
+	 * 
+	 * @author Administrator
+	 * 
+	 */
+	class PasswordEditTextWather extends BaseTextWatcher {
+		@Override
+		public void onTextChanged(CharSequence s, int start, int before,
+				int count) {
+			_fUserInfo.set_fPassWord(s.toString());
+		}
 	}
+
 }
